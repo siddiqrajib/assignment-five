@@ -8,7 +8,99 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+
+    <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Item 1</a></li>
+              <li>
+                <a>Parent</a>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-3xl">P-Ticket</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Item 1</a></li>
+            <li>
+              <details>
+                <summary>Parent</summary>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a>Item 3</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">   
+          <a class="btn text-[#1DD100]">Bus <img src="./images/bus-icon.png" alt=""></a>
+        </div>
+      </div>
     <main>
+        <div class="hero min-h-screen" >
+            <img src="./images/banner.png" alt="">
+            
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-md">
+                <h1 class="mb-5 text-5xl font-bold">End- to -End Travel <br><span class="text-[#1DD100] font-extrabold">TOMA Paribahan</span> </h1>
+                <p class="mb-5">You can run unit tests and view the results directly within the app. The integrated testing features allow for a steamlines.</p>
+                <button class="btn  btn-active btn-accent"><span class="text-black ">Buy Tickets</span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col w-full lg:flex-row  px-16">
+            <div class="grid flex-grow h-60 card bg-[#FFBF0F] rounded-box place-items-center">
+                <div class="flex flex-col-2 gap-16">
+                    <div class="">
+                        <h3 class="text-4xl font-extrabold text-black py-6">20% OFF</h3>
+                            <p class="text-xl">on your next purchase<br>use by January 2024</p>
+                    </div>
+                    <div>
+                        <h2 class="text-4xl font-extrabold  text-black py-6">Couple 20</h2>
+                           <p>Coupon Code</p> 
+                    </div>                   
+                </div>
+            </div> 
+            <div class="divider lg:divider-horizontal"></div> 
+            <div class="grid flex-grow h-60 card bg-[#F78C9C] rounded-box place-items-center">
+                <div class="flex flex-col-2 gap-16">
+                    <div class="">
+                        <h3 class="text-4xl font-extrabold text-black py-6">15% OFF</h3>
+                            <p class="text-xl">on your next purchase<br>use by January 2024</p>
+                    </div>
+                    <div>
+                        <h2 class="text-4xl font-extrabold  text-black py-6">New15</h2>
+                           <p>Coupon Code</p> 
+                    </div>                   
+                </div>
+               
+            </div>
+          </div>
+          
+       <section class="my-8">
+        <div class="text-center items-center justify-center">  
+            <h1 class="text-xl font-bold">TOMA Paribahan </h1>
+        <p>Yes, you can run unit tests and view the results directly within the app. The integrated<br> testing features allow for a streamlined .</p>
+        </div>
+
+        <div>
+            
+        </div>
+       </section>
+        
 
     </main>
 
