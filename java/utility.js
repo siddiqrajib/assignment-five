@@ -1,6 +1,6 @@
 var remainingSeats = 28;
 var bookedSeats = 0;
-let TotalPrice =0;
+
 
 function toSeat(seat) {
     if (seat.style.backgroundColor === "green") {
@@ -20,7 +20,7 @@ function toSeat(seat) {
 }
 
 
-
+let sum=0;
 const allbtn=document.getElementsByClassName("kbd");
 for(const btn of allbtn){
     btn.addEventListener("click",function(e){
@@ -45,8 +45,9 @@ for(const btn of allbtn){
         const totalcost = document.getElementById("TotalPrice").innerText;
         
         const convertedtotalprice = parseInt(totalcost);
+        const sum = convertedtotalprice+parseInt(maxprice)
       
-        document.getElementById("TotalPrice").innerText = convertedtotalprice+parseInt(maxprice);
+        document.getElementById("TotalPrice").innerText = sum;
 
 
     })
@@ -58,12 +59,12 @@ for(const btn of allbtn){
  btn.addEventListener("click",function(){
     const inputfield = document.getElementById("input-field").value ;
     const couponcode = inputfield.split(" ").join("").toUpperCase();
-    if(TotalPrice>=550){
-        if(couponcode==="sell200"){
-            console.log('Rajib')
+   
+        if(couponcode==="new15"){
+            console.log('hi')
         }else{
             alert();
         }
-    }
+    
 
  })
