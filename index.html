@@ -6,6 +6,7 @@
     <title>Dom File</title>    
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
@@ -110,7 +111,7 @@
                 </div>
            
                 <div class="navbar-end">   
-                  <a class="btn text-[#1DD100]"> <img src="./images/seat-green.png" alt=""><p><span>0</span> seats left</p> </a>
+                  <a class="btn text-[#1DD100]"> <img src="./images/seat-green.png" alt=""><p><span id="remainingSeats">8</span></p> seats left</p> </a>
                   
                 </div>
               </div>
@@ -119,7 +120,8 @@
               <div class="flex flex-col" >
                 
                 <img class="" src="./images/fare.png" alt="">
-                <p><span class="text-6xl font-extrabold ">550</span><span class="text-6xl font-extrabold " >taka</span><br><span>per seat</span></p>
+                <p ><span id="pricefind" class="text-6xl font-extrabold ">550</span><span class="text-6xl font-extrabold " >tk</span><br></p>
+                <p>per seat</p>
               </div>
         </div>
        </section >
@@ -144,58 +146,62 @@
                       </div>
     
                 </div>
+
+              
+            
+              
                 <div class="seat">
-                <div class="flex gap-10 my-6" >
+                <div class="flex gap-20 my-6" >
                     <a>A</a>
-                    <kbd id="A1" class="kbd">A1</kbd>
-                    <kbd id="A2" class="kbd">A2</kbd>
-                    <kbd id="A3" class="kbd">A3</kbd>
-                    <kbd id="A4" class="kbd">A4</kbd>
+                    <kbd  class="kbd" onclick="toSeat(this)">A1</kbd>
+                    <kbd  class="kbd" onclick="toSeat(this)">A2</kbd>
+                    <kbd  class="kbd" onclick="toSeat(this)">A3</kbd>
+                    <kbd  class="kbd" onclick="toSeat(this)">A4</kbd>
                  </div>
-                 <div class="flex gap-10 my-6">
+                 <div class="flex gap-20 my-6">
                     <a>B</a>
-                    <kbd id="B1" class="kbd">B1</kbd>
-                    <kbd id="B2" class="kbd">B2</kbd>
-                    <kbd id="B3" class="kbd">B3</kbd>
-                    <kbd id="B4" class="kbd">B4</kbd>
+                    <kbd  class="kbd"onclick="toSeat(this)">B1</kbd>
+                    <kbd  class="kbd"onclick="toSeat(this)">B2</kbd>
+                    <kbd  class="kbd"onclick="toSeat(this)">B3</kbd>
+                    <kbd  class="kbd"onclick="toSeat(this)">B4</kbd>
                  </div>
-                 <div class="flex gap-10 my-6">
+                 <div class="flex gap-20 my-6">
                     <a>C</a>
-                    <kbd class="kbd">C1</kbd>
-                    <kbd class="kbd">C2</kbd>
-                    <kbd class="kbd">C3</kbd>
-                    <kbd class="kbd">C4</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">C1</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">C2</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">C3</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">C4</kbd>
                  </div>
-                 <div class="flex gap-10 my-6">
+                 <div class="flex gap-20 my-6">
                     <a>D</a>
-                    <kbd class="kbd">D1</kbd>
-                    <kbd class="kbd">D2</kbd>
-                    <kbd class="kbd">D3</kbd>
-                    <kbd class="kbd">D4</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">D1</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">D2</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">D3</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">D4</kbd>
                  </div>
                  
-                 <div class="flex gap-10 my-6">
+                 <div class="flex gap-20 my-6">
                     <a>E</a>
-                    <kbd class="kbd">E1</kbd>
-                    <kbd class="kbd">E2</kbd>
-                    <kbd class="kbd">E3</kbd>
-                    <kbd class="kbd">E4</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">E1</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">E2</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">E3</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">E4</kbd>
                  </div>
                  
-                 <div class="flex gap-10 my-6">
+                 <div class="flex gap-20 my-6">
                     <a>F</a>
-                    <kbd class="kbd">F1</kbd>
-                    <kbd class="kbd">F2</kbd>
-                    <kbd class="kbd">F3</kbd>
-                    <kbd class="kbd">F4</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">F1</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">F2</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">F3</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">F4</kbd>
                  </div>
                  
-                 <div class="flex gap-10 my-6">
+                 <div class="flex gap-20 my-6">
                     <a>G</a>
-                    <kbd class="kbd">G1</kbd>
-                    <kbd class="kbd">G2</kbd>
-                    <kbd class="kbd">G3</kbd>
-                    <kbd class="kbd">G4</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">G1</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">G2</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">G3</kbd>
+                    <kbd class="kbd"onclick="toSeat(this)">G4</kbd>
                  </div>
             </div>
         </div>
@@ -207,35 +213,20 @@
                       <!-- head -->
                       <thead>
                         <tr>
-                          <th></th>
-                          <th>seat<span><button>0</button></span></th>
+                          <th><p class="text-3xl">seats:<button><span id="bookedSeats">0</span></button> </p></th> 
+                          <!-- <th>seat<span><button class="btn">0</button></span></th> -->
+                          <!-- <th>seat<span id="bookedSeats">0</span></th> -->
                           <th>class</th>
                           <th>price</th>
                         </tr>
                       </thead>
                       <tbody>
                         <!-- row 1 -->
-                        <tr>
-                          <th>1</th>
-                          <td >Cl</td>
-                          <td>Economy</td>
-                          <td>Blue</td>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr>
-                          <th>2</th>
-                          <td>C1</td>
-                          <td>Economy</td>
-                          <td>Price</td>
-                        </tr>
-                        <!-- row 3 -->
-                        <tr>
-                          <th>Total price</th>
-                          <td>1100taka</td>                       
-                        </tr>
-                      </tbody>
+                      
                     </table>
+                    <ul id="placeseat"></ul>
                   </div>
+                  <h4>Total Price : <span id="TotalPrice">0</span>taka</h4>
 
                   <div>
                     <div class="bg-white p-6 rounded-md ">
