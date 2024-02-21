@@ -7,7 +7,7 @@ function toSeat(seat) {
         seat.style.backgroundColor = "white";
         remainingSeats++;
         bookedSeats--;
-        TotalPrice -= 500;
+      
     } else {
         seat.style.backgroundColor = "green";
         remainingSeats--;
@@ -57,10 +57,8 @@ for(const btn of allbtn){
  const btn = document.getElementById("apply-btn");
  btn.addEventListener("click",function(){
     const inputfield = document.getElementById("input-field").value ;
-    console.log(inputfield);
     const couponcode = inputfield.split(" ").join("").toUpperCase();
-    console.log(couponcode);
-    if(totalcost>=550){
+    if(TotalPrice>=550){
         if(couponcode==="sell200"){
             console.log('Rajib')
         }else{
